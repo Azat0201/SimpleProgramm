@@ -6,7 +6,7 @@ def sprint(*args):  # simple with separator and end is nothing
     print(*args, sep='', end='')
 
 
-def is_correct_number(number):
+def is_correct_number(number):  # check number to fraction
     if fullmatch(r'-?\d+/?-?\d+', number):
         num1, num2 = map(lambda x: abs(int(x)), number.split('/'))
         if num2 == 0:
@@ -18,7 +18,7 @@ def is_correct_number(number):
         raise ValueError('Wrong number')
 
 
-def do_fraction_is_correct(num):
+def do_fraction_is_correct(num):  # do from incorrect fraction to correct fraction
     num = num.lower().replace(':', '/')
     if num == 'exit':
         exit()
