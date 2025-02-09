@@ -19,9 +19,7 @@ def is_correct_number(number):  # check number to fraction
 
 
 def do_fraction_is_correct(num):  # do from incorrect fraction to correct fraction
-    num = num.lower().replace(':', '/')
-    if num == 'exit':
-        exit()
+    num = num.lower().replace(':', '/').replace('\\', '/')
     num1, num2 = is_correct_number(num)
 
     sign = '-' if num.count('-') % 2 == 1 else ''
